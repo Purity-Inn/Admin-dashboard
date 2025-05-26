@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #1e1e1e;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.sidebar li:hover {
+  color: #fff;
+}
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: #fff;
+}
+
+.dashboard .grid > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard .grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+.user-table {
+  margin-top: 2rem;
+  background-color: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.table-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #ffc0cb; /* Soft pink for elegance */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: #292940;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2e2e44;
+}
+.dashboard {
+  padding:  20px;
+  color: #ffffff;
+  background-color: #111827; /* dark background */
+}
+
+.dashboard-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 0.3rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.chart-container {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  margin-bottom: 30px;
 }
