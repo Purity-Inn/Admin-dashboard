@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom'; // 👈 Add this
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import api from '../api';
 import './Login.css';
 
 export default function LoginForm({ onLogin }) {
-  const navigate = useNavigate(); // 👈 Hook to programmatically navigate
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
 
@@ -18,11 +18,21 @@ export default function LoginForm({ onLogin }) {
 
     try {
       const res = await api.post('/auth/login', form);
+      console.log(res.data);
+
       localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
-      onLogin(res.data.user); // optional
-      navigate('/dashboard'); // 👈 Redirect after login
+
+      if (res.data.user) {
+        localStorage.setItem('user', JSON.stringify(res.data.user));
+        if (onLogin) onLogin(res.data.user);
+      } else {
+        localStorage.removeItem('user');
+        if (onLogin) onLogin(null);
+      }
+
+      navigate('/dashboard');
     } catch (err) {
+      console.log(err);
       setError('Login failed. Check your credentials.');
     }
   };

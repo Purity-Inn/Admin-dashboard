@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/taskmanager-api', // Adjust to match your backend
+  baseURL: 'http://localhost:5000/api',
 });
 
 // Add token to headers if available

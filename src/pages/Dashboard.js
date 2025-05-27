@@ -1,6 +1,5 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import UserTable from '../components/UserTable';
 
 const data = [
   { name: 'Mon', users: 30 },
@@ -29,7 +28,7 @@ export default function Dashboard() {
         </ResponsiveContainer>
       </div>
 
-      <UserTable />
+
     </div>
   );
 }
