@@ -7,7 +7,9 @@ An interactive and responsive admin dashboard built with React. It connects to y
 👉 [View Deployed Dashboard](https://vercel.com/purity-kerubos-projects/admin-dashboard)
 
 ---
+## 🎥 Demo Video
 
+[click here to watch the demo](https://drive.google.com/file/d/1hDjGW0oFWxv-4GV49slWCcU-WtPPdPMe/view?usp=sharing)
 ## ✨ Features
 
 - 🔐 Admin login with JWT authentication
