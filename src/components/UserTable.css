@@ -11,7 +11,9 @@
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #333;
+  background: #18181b;
+  color: #fff;
 }
 
 .user-form button {
@@ -21,6 +23,7 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .user-form button:hover {
@@ -31,11 +34,26 @@ table {
   width: 100%;
   margin-top: 1rem;
   border-collapse: collapse;
+  background: transparent;
 }
 
 th, td {
   padding: 0.75rem;
   text-align: left;
+  border-bottom: 1px solid #222;
+}
+
+th {
+  background: #232336;
+  color: #38bdf8;
+}
+
+tr:nth-child(even) {
+  background: #232336;
+}
+
+tr:nth-child(odd) {
+  background: #1f1f1f;
 }
 
 .delete-btn {
@@ -45,12 +63,12 @@ th, td {
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .delete-btn:hover {
   background-color: #d32f2f;
 }
-/* src/components/UserTable.css */
 
 .search-input {
   padding: 8px 12px;
