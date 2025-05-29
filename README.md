@@ -46,13 +46,6 @@ npm install
 # Start the development server
 npm start
 ```
-
----
-
-## 📸 Screenshots
-
-_Add screenshots of your dashboard UI here!_
-
 ---
 
 ## 📝 Notes
